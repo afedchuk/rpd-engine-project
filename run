@@ -1,0 +1,8 @@
+#!/bin/sh
+if [ -f "$1.php" ]; then
+  cmd="$1.php"
+  shift
+  exec $cmd $*
+else
+  exec bin/cake $*
+fi
